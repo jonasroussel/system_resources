@@ -1,22 +1,19 @@
-A library for Dart developers.
+# System Resources
+[![pub package](https://img.shields.io/pub/v/system_resources.svg)](https://pub.dev/packages/system_resources)
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+Provides easy access to system resources (CPU load, memory usage).
 
 ## Usage
-
-A simple usage example:
 
 ```dart
 import 'package:system_resources/system_resources.dart';
 
-main() {
-  var awesome = new Awesome();
+void main() {
+  print('CPU Load Average : ${SystemResources.cpuLoadAvg()}');
+  print('Memory Usage     : ${SystemResources.memUsage()}');
 }
 ```
 
 ## Features and bugs
 
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+Please file feature requests and bugs at the [issue tracker][https://github.com/jonasroussel/system_resources/issues].
