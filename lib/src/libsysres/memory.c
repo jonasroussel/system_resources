@@ -59,7 +59,7 @@ float get_memory_usage()
 #endif
 
 // Windows
-#if _WIN32
+#if _WIN64
 
 // TODO
 

@@ -9,8 +9,8 @@ Provides easy access to system resources (CPU load, memory usage).
 import 'package:system_resources/system_resources.dart';
 
 void main() {
-  print('CPU Load Average : ${SystemResources.cpuLoadAvg()}');
-  print('Memory Usage     : ${SystemResources.memUsage()}');
+  print('CPU Load Average : ${(SystemResources.cpuLoadAvg() * 100).toInt()}%');
+  print('Memory Usage     : ${(SystemResources.memUsage() * 100).toInt()}%');
 }
 ```
 

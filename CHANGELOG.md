@@ -1,3 +1,7 @@
+## 1.1.0
+
+- Improve macos cpu load average
+
 ## 1.0.0
 
-- Initial version, created by Stagehand
+- First version with every based features

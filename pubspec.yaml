@@ -1,14 +1,11 @@
 name: system_resources
 description: Provides easy access to system resources (CPU load, memory usage).
-version: 1.0.0
+version: 1.1.0
 repository: https://github.com/jonasroussel/system_resources
 homepage: https://github.com/jonasroussel/system_resources#readme
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
-
-dependencies:
-  path: ^1.8.0
 
 dev_dependencies:
   pedantic: ^1.9.0
