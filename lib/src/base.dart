@@ -14,7 +14,7 @@ class SystemResources {
     if (Platform.isLinux) {
       path = join(
         Directory.current.path,
-        'tools',
+        'tool',
         'libsysres',
         'build',
         'libsysres.so',
@@ -22,7 +22,7 @@ class SystemResources {
     } else if (Platform.isMacOS) {
       path = join(
         Directory.current.path,
-        'tools',
+        'tool',
         'libsysres',
         'build',
         'libsysres.dylib',
