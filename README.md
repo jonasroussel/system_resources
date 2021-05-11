@@ -16,4 +16,4 @@ void main() {
 
 ## Features and bugs
 
-Please file feature requests and bugs at the [issue tracker][https://github.com/jonasroussel/system_resources/issues].
+Please file feature requests and bugs at the [issue tracker](https://github.com/jonasroussel/system_resources/issues).
