@@ -1,19 +1,18 @@
-OS = $(shell uname)
+OS = $(shell uname -s | tr A-Z a-z)
+ARCH = $(shell uname -m | tr A-Z a-z)
 CC = gcc # C compiler
 CFLAGS = -fPIC -Wall -Wextra -O2 -g # C flags
 RM = rm -f # rm command
-
-ifeq ($(OS),Darwin)
-	LDFLAGS = -dynamiclib # linking flags
-	TARGET_LIB = lib/build/libsysres-mac64.dylib # target lib
-else
-	LDFLAGS = -shared # linking flags
-	TARGET_LIB = lib/build/libsysres-linux64.so # target lib
-endif
-
+LDFLAGS = -shared # linking flags
+TARGET_LIB := lib/build/libsysres-$(OS)-$(ARCH).so # target lib
 SRCS = cpu.c memory.c  # source files
 SRCS := $(addprefix lib/src/libsysres/, $(SRCS))
 OBJS = $(SRCS:.c=.o)
+
+ifeq ($(OS),darwin)
+	LDFLAGS = -dynamiclib
+	TARGET_LIB := lib/build/libsysres-$(OS)-$(ARCH).dylib
+endif
 
 .PHONY: all
 all: ${TARGET_LIB}

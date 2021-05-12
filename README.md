@@ -14,6 +14,42 @@ void main() {
 }
 ```
 
-## Features and bugs
+## Features
 
-Please file feature requests and bugs at the [issue tracker](https://github.com/jonasroussel/system_resources/issues).
+### Linux
+
+Function   | x86_64 | i686 | ARMv7 | ARMv8+ |
+-----------|--------|------|-------|--------|
+cpuLoadAvg | 🟢     | 🔵   | 🟠    | 🟠     |
+memUsage   | 🟢     | 🔵   | 🟠    | 🟠     |
+
+### macOS
+
+Function   | Intel | M1 |
+-----------|-------|----|
+cpuLoadAvg | 🟢    | 🟠 |
+memUsage   | 🟢    | 🟠 |
+
+### Windows
+
+Function   | 64 bit | 32 bit | ARMv7 | ARMv8+ |
+-----------|--------|--------|-------|--------|
+cpuLoadAvg | 🔴     | 🔴     | 🔴    | 🔴     |
+memUsage   | 🔴     | 🔴     | 🔴    | 🔴     |
+
+#
+
+🟢 : Coded, Compiled, Tested
+
+🔵 : Coded, Compiled
+
+🟠 : Not Compiled
+
+🔴 : No Code
+
+## Improve, compile & test
+
+You are free to improve, compile and test my C code for any platform not fully supported.
+
+Github
+[Issues](https://github.com/jonasroussel/system_resources/issues) | [Pull requests](https://github.com/jonasroussel/system_resources/pulls)

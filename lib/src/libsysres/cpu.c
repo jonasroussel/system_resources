@@ -4,12 +4,15 @@
 #if __unix__
 
 #include <stdlib.h>
+#include <sys/sysinfo.h>
 
 float get_cpu_load()
 {
 	double load[1] = {0};
+
 	getloadavg(load, 1);
-	return load[0];
+
+	return load[0] / get_nprocs();
 }
 
 #endif

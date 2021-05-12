@@ -1,6 +1,6 @@
 name: system_resources
 description: Provides easy access to system resources (CPU load, memory usage).
-version: 1.1.0
+version: 1.2.0
 repository: https://github.com/jonasroussel/system_resources
 homepage: https://github.com/jonasroussel/system_resources#readme
 
