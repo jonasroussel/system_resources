@@ -1,3 +1,8 @@
+## 1.3.0
+
+- Improve linux memory usage
+- Adding `linux-aarch64` to support list
+
 ## 1.2.0
 
 - Improve linux cpu load average

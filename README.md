@@ -18,10 +18,10 @@ void main() {
 
 ### Linux
 
-Function   | x86_64 | i686 | ARMv7 | ARMv8+ |
------------|--------|------|-------|--------|
-cpuLoadAvg | 🟢     | 🔵   | 🟠    | 🟠     |
-memUsage   | 🟢     | 🔵   | 🟠    | 🟠     |
+Function   | x86_64 | i686 | aarch64 | aarch32 |
+-----------|--------|------|---------|---------|
+cpuLoadAvg | 🟢     | 🟢   | 🟢      | 🟠      |
+memUsage   | 🟢     | 🟢   | 🟢      | 🟠      |
 
 ### macOS
 
@@ -37,13 +37,10 @@ Function   | 64 bit | 32 bit | ARMv7 | ARMv8+ |
 cpuLoadAvg | 🔴     | 🔴     | 🔴    | 🔴     |
 memUsage   | 🔴     | 🔴     | 🔴    | 🔴     |
 
-#
 
 🟢 : Coded, Compiled, Tested
 
-🔵 : Coded, Compiled
-
-🟠 : Not Compiled
+🟠 : Coded, Not Compiled
 
 🔴 : No Code
 

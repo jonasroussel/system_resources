@@ -3,17 +3,38 @@
 // Linux
 #if __unix__
 
-#include "sys/types.h"
-#include "sys/sysinfo.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
+
+static long long get_entry(const char *name, const char *buff)
+{
+	char *hit = strstr(buff, name);
+	long long val = strtoll(hit + strlen(name), NULL, 10);
+	return val;
+}
 
 float get_memory_usage()
 {
-	struct sysinfo memInfo;
+	FILE *fd;
+	char buff[4096] = {0};
 
-	sysinfo(&memInfo);
+	fd = fopen("/proc/meminfo", "r");
+	rewind(fd);
 
-	long long total_memory = memInfo.totalram * memInfo.mem_unit;
-	long long used_memory = (memInfo.totalram - memInfo.freeram) * memInfo.mem_unit;
+	size_t len = fread(buff, 1, sizeof(buff) - 1, fd);
+
+	if (len == 0)
+	{
+		return 0.0f;
+	}
+
+	long long total_memory = get_entry("MemTotal:", buff);
+	long long free_memory = get_entry("MemAvailable:", buff);
+	long long used_memory = total_memory - free_memory;
+
+	fclose(fd);
 
 	return (float)used_memory / (float)total_memory;
 }

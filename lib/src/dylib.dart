@@ -6,6 +6,7 @@ import 'dart:isolate' show Isolate;
 const Set<String> _supported = {
   'linux-x86_64',
   'linux-i686',
+  'linux-aarch64',
   'darwin-x86_64',
 };
 
@@ -19,16 +20,7 @@ String _filename() {
 
   final os = uname[0];
   final arch = uname[1];
-  var ext = '';
-
-  switch (os) {
-    case 'linux':
-      ext = 'so';
-      break;
-    case 'darwin':
-      ext = 'dylib';
-      break;
-  }
+  final ext = os == 'darwin' ? 'dylib' : 'so';
 
   final target = os + '-' + arch;
   if (!_supported.contains(target)) {
