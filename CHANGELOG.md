@@ -1,3 +1,7 @@
+## 1.4.1
+
+- Fixing linux negative memory
+
 ## 1.4.0
 
 - Improve linux memory usage (substract buffers & cached)
