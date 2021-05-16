@@ -1,3 +1,7 @@
+## 1.4.0
+
+- Improve linux memory usage (substract buffers & cached)
+
 ## 1.3.0
 
 - Improve linux memory usage

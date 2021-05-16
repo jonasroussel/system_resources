@@ -32,7 +32,9 @@ float get_memory_usage()
 
 	long long total_memory = get_entry("MemTotal:", buff);
 	long long free_memory = get_entry("MemAvailable:", buff);
-	long long used_memory = total_memory - free_memory;
+	long long buffers = get_entry("Buffers:", buff);
+	long long cached = get_entry("Cached:", buff);
+	long long used_memory = total_memory - free_memory - buffers - cached;
 
 	fclose(fd);
 
