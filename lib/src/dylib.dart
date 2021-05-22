@@ -19,8 +19,10 @@ String _filename() {
       .split(' ');
 
   final os = uname[0];
-  final arch = uname[1];
+  var arch = uname[1];
   final ext = os == 'darwin' ? 'dylib' : 'so';
+
+  if (arch == 'i386') arch = 'i686';
 
   final target = os + '-' + arch;
   if (!_supported.contains(target)) {

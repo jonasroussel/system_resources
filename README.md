@@ -18,10 +18,10 @@ void main() {
 
 ### Linux
 
-Function   | x86_64 | i686 | aarch64 | aarch32 |
------------|--------|------|---------|---------|
-cpuLoadAvg | 🟢     | 🟢   | 🟢      | 🟠      |
-memUsage   | 🟢     | 🟢   | 🟢      | 🟠      |
+Function   | x86_64 | i686 | aarch64 | armv7l |
+-----------|--------|------|---------|--------|
+cpuLoadAvg | 🟢     | 🟢   | 🟢      | 🟢     |
+memUsage   | 🟢     | 🟢   | 🟢      | 🟢     |
 
 ### macOS
 
@@ -46,7 +46,7 @@ memUsage   | 🔴     | 🔴     | 🔴    | 🔴     |
 
 ## Improve, compile & test
 
-You are free to improve, compile and test my C code for any platform not fully supported.
+You are free to improve, compile and test `libsysres` C code for any platform not fully supported.
 
 Github
 [Issues](https://github.com/jonasroussel/system_resources/issues) | [Pull requests](https://github.com/jonasroussel/system_resources/pulls)

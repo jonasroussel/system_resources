@@ -1,3 +1,8 @@
+## 1.4.2
+
+- Support for `linux-armv7l`
+- Better README.md
+
 ## 1.4.1
 
 - Fixing linux negative memory
