@@ -18,17 +18,17 @@ void main() {
 
 ### Linux
 
-Function   | x86_64 | i686 | aarch64 | armv7l |
------------|--------|------|---------|--------|
-cpuLoadAvg | 🟢     | 🟢   | 🟢      | 🟢     |
-memUsage   | 🟢     | 🟢   | 🟢      | 🟢     |
+Function   | x86_64 | i686  | aarch64 | armv7l |
+-----------|--------|-------|---------|--------|
+cpuLoadAvg | 🟢     | 🟢    | 🟢      | 🟢     |
+memUsage   | 🟢     | 🟢    | 🟢      | 🟢     |
 
 ### macOS
 
-Function   | Intel | M1 |
------------|-------|----|
-cpuLoadAvg | 🟢    | 🟠 |
-memUsage   | 🟢    | 🟠 |
+Function   | Intel | M1  |
+-----------|-------|-----|
+cpuLoadAvg | 🟢    | 🟢  |
+memUsage   | 🟢    | 🟢  |
 
 ### Windows
 

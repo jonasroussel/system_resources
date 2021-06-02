@@ -7,6 +7,8 @@ const Set<String> _supported = {
   'linux-x86_64',
   'linux-i686',
   'linux-aarch64',
+  'linux-armv7l',
+  'darwin-arm64',
   'darwin-x86_64',
 };
 

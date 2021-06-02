@@ -1,3 +1,7 @@
+## 1.5.0
+
+- Adding `darwin-arm64` (Mac M1) to support list
+
 ## 1.4.2
 
 - Support for `linux-armv7l`
