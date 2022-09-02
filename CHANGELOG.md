@@ -1,3 +1,7 @@
+## 1.6.0
+
+- https://github.com/jonasroussel/system_resources/pull/2
+
 ## 1.5.0
 
 - Adding `darwin-arm64` (Mac M1) to support list
