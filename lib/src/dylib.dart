@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:cli';
 import 'dart:ffi';
 import 'dart:isolate' show Isolate;
 
@@ -34,14 +33,14 @@ String _filename() {
   return 'libsysres-$target.$ext';
 }
 
-DynamicLibrary libsysres = () {
+Future<DynamicLibrary> loadLibsysres = () async {
   String objectFile;
 
   if (Platform.script.path.endsWith('.snapshot')) {
     objectFile = File.fromUri(Platform.script).parent.path + '/' + _filename();
   } else {
     final rootLibrary = 'package:system_resources/system_resources.dart';
-    final build = waitFor(Isolate.resolvePackageUri(Uri.parse(rootLibrary)))
+    final build = (await Isolate.resolvePackageUri(Uri.parse(rootLibrary)))
         ?.resolve('build/');
 
     if (build == null) {
