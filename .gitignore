@@ -9,3 +9,6 @@ pubspec.lock
 
 # Directory created by dartdoc
 doc/api/
+
+# Executables built by `dart compile`
+build/

@@ -1,3 +1,5 @@
-library system_resources;
+/// Provides easy access to system resources (CPU load, memory usage).
+library;
 
-export 'src/base.dart';
+export 'src/system_resources_unsupported.dart'
+    if (dart.library.ffi) 'src/system_resources_ffi.dart';

@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Dart ${{ matrix.sdk }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, ubuntu-24.04-arm, macos-latest, macos-15-intel, windows-latest, windows-11-arm]
+        sdk: [stable]
+        include:
+          - os: ubuntu-latest
+            sdk: "3.5.0"
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ matrix.sdk }}
+      - run: dart pub get
+      - if: matrix.sdk == 'stable'
+        run: dart format --output=none --set-exit-if-changed .
+      - run: dart analyze --fatal-infos
+      - run: dart test
+      - name: AOT executable
+        shell: bash
+        run: |
+          dart compile exe example/example.dart -o build/example.exe
+          cd "$RUNNER_TEMP" && "$GITHUB_WORKSPACE/build/example.exe"
