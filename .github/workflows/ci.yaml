@@ -30,5 +30,6 @@ jobs:
       - name: AOT executable
         shell: bash
         run: |
+          mkdir -p build
           dart compile exe example/example.dart -o build/example.exe
           cd "$RUNNER_TEMP" && "$GITHUB_WORKSPACE/build/example.exe"
